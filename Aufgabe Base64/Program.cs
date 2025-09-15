@@ -20,6 +20,7 @@ namespace Aufgabe_Base64
             int base_zahl = 0;
             int binärzähler = 0;
             int auffüllen = 0;
+            int teiler = 0;
             string gleichzeichen = "";
             string baseausgabe = "";
             string based64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -67,7 +68,9 @@ namespace Aufgabe_Base64
                 auffüllen--;
             }
 
-            for (int i = 0; i <27; i++)
+            teiler = binärlang.Length / 6;
+
+            for (int i = 0; i <teiler; i++)
             {
                 for (int b = 0; b < 6; b++)
                 {
@@ -90,7 +93,7 @@ namespace Aufgabe_Base64
                 base_zahl = 0;
                 
             }
-
+            Console.WriteLine(binärlang.Length);
             baseausgabe += gleichzeichen;
             Console.WriteLine(eingabe_text);
             Console.WriteLine(baseausgabe);
