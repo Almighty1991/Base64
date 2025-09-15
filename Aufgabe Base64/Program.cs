@@ -93,13 +93,12 @@ namespace Aufgabe_Base64
                 base_zahl = 0;
                 
             }
-            Console.WriteLine(binärlang.Length);
             baseausgabe += gleichzeichen;
             Console.WriteLine(eingabe_text);
-            Console.WriteLine(baseausgabe);
+            Console.WriteLine("Base64-Ausgabe: " + baseausgabe);
             byte[] bytes = Encoding.UTF8.GetBytes(eingabe_text);
             string base64 = Convert.ToBase64String(bytes);
-            Console.WriteLine("Base64-Ausgabe: " + base64);
+            Console.WriteLine("Base64-Überprüfen: " + base64);
         }
     }
 }
