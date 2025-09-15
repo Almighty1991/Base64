@@ -19,11 +19,9 @@ namespace Aufgabe_Base64
             int zähler = 5;
             int base_zahl = 0;
             int binärzähler = 0;
-            int zähler_ausgabe = 0;
             int auffüllen = 0;
             string gleichzeichen = "";
             string baseausgabe = "";
-            int teiler = 0;
             string based64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
             Console.WriteLine("Geben Sie einen Text ein: ");
@@ -68,7 +66,7 @@ namespace Aufgabe_Base64
                 binärlang += "0";
                 auffüllen--;
             }
-            teiler = binärlang.Length / 6;
+
             for (int i = 0; i <27; i++)
             {
                 for (int b = 0; b < 6; b++)
@@ -82,7 +80,6 @@ namespace Aufgabe_Base64
                     if (binärshort[c] == 49)
                     {
                         base_zahl += (int)Math.Pow(2, zähler);
-                        zähler_ausgabe++;
                     }
                     zähler--;
                 }
@@ -91,7 +88,6 @@ namespace Aufgabe_Base64
                 zähler = 5;
                 binärshort = "";       
                 base_zahl = 0;
-                zähler_ausgabe = 0;
                 
             }
 
